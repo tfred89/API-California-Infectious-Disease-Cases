@@ -11,11 +11,20 @@ The 'views.py' file implements django_rest_framework's ModelViewSet, supporting 
 
 The URL configuration implements the following API endpoints:
 
-/api/v1/california-disease-cases                 - list view of all cases
-/api/v1/california-disease-cases/<primary key>   - detail view of indiviudal instance
-/api/v1/cases-by-year/<year>                     - view of cases in a given year 2001 onward
-/api/v1/cases-by-county/<county>                 - view of cases by county name
-/api/v1/cases-by-disease/<disease_name>          - view of cases by disease name
+/api/v1/california-disease-cases                 
+-- list view of all cases, 10 per page
+
+/api/v1/california-disease-cases/<primary key>   
+-- detail view of indiviudal instance based on arbitray primary key
+  
+/api/v1/cases-by-year/<year>                     
+-- view of cases in a given year 2001 onward
+  
+/api/v1/cases-by-county/<county>                 
+ -- view of cases by county name
+  
+/api/v1/cases-by-disease/<disease_name>         
+-- view of cases by disease name
 
 Currently, the last three endpoints/views only display the first 10 results for a given query, as custom pagination did
 not seem necessary at this time.
